@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/widget/randomuser.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -40,9 +41,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => SecretPage(),
+        )),
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.arrow_right),
       ),
     );
   }
