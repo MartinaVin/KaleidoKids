@@ -1,0 +1,20 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    - parameter_assignments
+
+#values: ignore, info, warning, error
+analyzer:
+  exclude:
+    - '**.freezed.dart'
+    - '**.config.dart'
+  errors:
+    missing_required_param: error
+    missing_return: error
+    parameter_assignments: error
+    todo: info
+    avoid_classes_with_only_static_members: ignore
+    prefer_collection_literals: ignore
+    avoid_redundant_argument_values: ignore #I don't trust Flutter team to keep defaults
+    leading_newlines_in_multiline_strings: ignore
