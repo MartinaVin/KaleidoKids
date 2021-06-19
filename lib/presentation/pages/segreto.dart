@@ -4,6 +4,10 @@ class SecretPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Kaleido Kids"),
+      ),
+      //drawer: Container,
       body: Column(
         children: [
           Image.network(
@@ -12,12 +16,12 @@ class SecretPage extends StatelessWidget {
             width: 200,
             fit: BoxFit.cover,
           ),
-          IconButton(
+          /*IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
             icon: Icon(Icons.arrow_left),
-          ),
+          ),*/
         ],
       ),
     );

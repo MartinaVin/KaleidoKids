@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
+import 'package:kaleidokids/presentation/pages/title.dart';
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Kaleido kids',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primaryColor: const Color(0xFF0B9CAD),
+        accentColor: const Color(0xFF206CAC),
+        errorColor: const Color(0xFFF25B68),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Titlepage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
