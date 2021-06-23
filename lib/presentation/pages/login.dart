@@ -12,22 +12,15 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      /*
       decoration: BoxDecoration(
           image: DecorationImage(
         //repeat: ImageRepeat.repeat,
         fit: BoxFit.cover,
         image: AssetImage('assets/images/background.png'),
-      )),
+      )),*/
       child: Scaffold(
         appBar: AppBar(
-          //leading: DrawerButton(),
-          leading: IconButton(
-            icon: Icon(
-              Icons.menu,
-              color: Theme.of(context).primaryColor,
-            ),
-            onPressed: () => Scaffold.of(context).openDrawer(),
-          ),
           title: Text(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
@@ -36,8 +29,6 @@ class LoginPage extends StatelessWidget {
           elevation: 0,
           actions: [HelpButton()],
         ),
-        drawer: CustomDrawer(),
-        backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
