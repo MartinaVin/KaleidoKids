@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kaleidokids/presentation/pages/homepage.dart';
 import 'package:kaleidokids/presentation/pages/title.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
         accentColor: const Color(0xFF206CAC),
         errorColor: const Color(0xFFF25B68),
       ),
-      home: Titlepage(title: 'Flutter Demo Home Page'),
+      home: const Titlepage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,5 +1,6 @@
 import 'package:http/http.dart';
 
+// ignore: non_constant_identifier_names
 Future<String> fetch_data() async {
   final futureresponse = get(Uri.parse("https://randomuser.me/api/"));
   final response = await futureresponse;

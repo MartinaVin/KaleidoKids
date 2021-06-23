@@ -31,33 +31,31 @@ class _TitlepageState extends State<Titlepage> {
             repeat: ImageRepeat.repeat,
           ),
           //Permette al figlio di scorrere quando non ci sta più in altezza
-          Column(
-            children: [
-              FractionallySizedBox(
-                  widthFactor: 0.8,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Image.asset('assets/images/titolo.png',
-                          fit: BoxFit.cover),
-                      Text("Kaleido\nKids"),
-                      ElevatedButton(
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => LoginPage())),
-                        child: const Text('INIZIA',
-                            style: TextStyle(
-                              fontSize: 25,
-                            )),
-                      )
-                    ],
-                  ))
-            ],
-          ),
+          FractionallySizedBox(
+              widthFactor: 0.8,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Image.asset(
+                    'assets/images/titolo.png',
+                    fit: BoxFit.cover,
+                    height: 20,
+                  ),
+                  //Text("Kaleido\nKids"),
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => LoginPage())),
+                    child: const Text('INIZIA',
+                        style: TextStyle(
+                          fontSize: 25,
+                        )),
+                  )
+                ],
+              ))
         ],
       ),
     );

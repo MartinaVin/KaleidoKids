@@ -28,7 +28,10 @@ class LoginPage extends StatelessWidget {
             ),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
-          title: Text("Kaleido Kids"),
+          title: Text(
+            "Kaleido Kids",
+            style: TextStyle(color: Theme.of(context).primaryColor),
+          ),
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [HelpButton()],

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:kaleidokids/presentation/pages/resultspage.dart';
-import 'package:kaleidokids/presentation/pages/segreto.dart';
-import 'package:kaleidokids/presentation/pages/title.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
-import 'package:kaleidokids/presentation/widget/randomuser.dart';
 import 'package:kaleidokids/presentation/widget/reading_card.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -17,14 +13,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +25,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),*/
-          title: Text("Kaleido Kids"),
+          title: Text(
+            "Kaleido Kids",
+            style: TextStyle(color: Theme.of(context).primaryColor),
+          ),
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [HelpButton()],
@@ -55,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       'Ciao!\nCosa vuoi leggere oggi?',
                     ),
                     GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio:
                             ReadingCard.kWidth / ReadingCard.kHeight,
                         crossAxisCount: 3,
@@ -63,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         crossAxisSpacing: 10,
                       ),
                       itemBuilder: (context, index) => ReadingCard(),
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       itemCount: 9,
                       shrinkWrap: true,
                     ),
