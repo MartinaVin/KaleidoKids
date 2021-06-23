@@ -10,25 +10,37 @@ class CustomDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-            child: const Text(
-              'Kaleido\nkids\nMENU',
+          Container(
+            //color: Colors.red,
+            child: DrawerHeader(
+              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+              child: const Text(
+                'Kaleido\nkids\n- menu -',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
-          ListTile(
-            title: const Text('Home'),
-            onTap: () {
-              //Navigator.of(context).pop();
-              //change state
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
-                ),
-              );
-            },
-            //then close the drawer
-            //Navigator.pop(context);
+          Container(
+            child: ListTile(
+              title: const Text('Home'),
+              onTap: () {
+                //Navigator.of(context).pop();
+                //change state
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => MyHomePage(),
+                  ),
+                );
+              },
+              tileColor: Theme.of(context).primaryColor,
+              hoverColor: Theme.of(context).accentColor,
+              //then close the drawer
+              //Navigator.pop(context);
+            ),
           ),
           ListTile(
             title: const Text('Pagina Personale'),
@@ -41,7 +53,17 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Secret Page'),
+            title: const Text('Storia'),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => SecretPage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Metodo di valutazione'),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
