@@ -5,7 +5,12 @@ class DrawerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () => Scaffold.of(context).openDrawer(), child: Placeholder());
+      onTap: () => Scaffold.of(context).openDrawer(),
+      child: Icon(
+        Icons.menu,
+        color: Theme.of(context).primaryColor,
+      ),
+    );
   }
 }
 

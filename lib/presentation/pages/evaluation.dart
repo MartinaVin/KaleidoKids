@@ -39,7 +39,31 @@ class _EvaluationPage extends State<EvaluationPage> {
         body: Stack(
           fit: StackFit.expand,
           children: [
-            Text("Evaluation page"),
+            //Text("Evaluation page"),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),
+              //const EdgeInsets.all(8.0),
+              child: Table(
+                border: TableBorder.all(),
+                columnWidths: const <int, TableColumnWidth>{
+                  //0: IntrinsicColumnWidth(),
+                  0: FlexColumnWidth(),
+                  1: FractionColumnWidth(.35),
+                  2: FixedColumnWidth(64),
+                },
+                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                children: [
+                  TableRow(children: [
+                    TableCell(child: Text("hei")),
+                    TableCell(child: Text("hello")),
+                  ]),
+                  TableRow(children: [
+                    TableCell(child: Text("hei")),
+                    TableCell(child: Text("let's see where this goes")),
+                  ])
+                ],
+              ),
+            )
           ],
         ),
       ),
