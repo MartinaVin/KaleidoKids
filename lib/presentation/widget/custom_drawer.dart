@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/evaluation.dart';
+import 'package:kaleidokids/presentation/pages/personal.dart';
 import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
-import 'package:kaleidokids/presentation/pages/resultspage.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -47,7 +47,7 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => ResultsPage(),
+                        builder: (context) => PersonalPage(),
                       ),
                     );
                   },

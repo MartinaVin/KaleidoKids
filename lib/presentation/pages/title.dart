@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
 import 'package:kaleidokids/presentation/pages/login.dart';
-import 'package:kaleidokids/presentation/pages/resultspage.dart';
+import 'package:kaleidokids/presentation/pages/results.dart';
 import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/widget/randomuser.dart';
 
@@ -24,13 +24,12 @@ class _TitlepageState extends State<Titlepage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          /*
           Image.asset(
             //Per usarla bisogna che sia anche inclusa nel pubspec.yaml
             'assets/images/background.png',
             fit: BoxFit.cover,
             repeat: ImageRepeat.repeat,
-          ),*/
+          ),
           //Permette al figlio di scorrere quando non ci sta più in altezza
           FractionallySizedBox(
               widthFactor: 0.8,

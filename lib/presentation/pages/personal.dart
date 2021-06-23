@@ -7,14 +7,14 @@ import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/randomuser.dart';
 
-class EvaluationPage extends StatefulWidget {
-  const EvaluationPage({Key key}) : super(key: key);
+class PersonalPage extends StatefulWidget {
+  const PersonalPage({Key key}) : super(key: key);
 
   @override
-  _EvaluationPage createState() => _EvaluationPage();
+  _PersonalPage createState() => _PersonalPage();
 }
 
-class _EvaluationPage extends State<EvaluationPage> {
+class _PersonalPage extends State<PersonalPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +39,7 @@ class _EvaluationPage extends State<EvaluationPage> {
         body: Stack(
           fit: StackFit.expand,
           children: [
-            Text("Evaluation page"),
+            Text("Personal page"),
           ],
         ),
       ),

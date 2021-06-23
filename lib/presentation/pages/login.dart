@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kaleidokids/presentation/pages/resultspage.dart';
+import 'package:kaleidokids/presentation/pages/results.dart';
 import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
@@ -12,22 +12,22 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*
       decoration: BoxDecoration(
           image: DecorationImage(
         //repeat: ImageRepeat.repeat,
         fit: BoxFit.cover,
         image: AssetImage('assets/images/background.png'),
-      )),*/
+      )),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: Text(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
-          backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [HelpButton()],
+          backgroundColor: Colors.transparent,
         ),
         body: SingleChildScrollView(
           child: ConstrainedBox(
