@@ -1,11 +1,7 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:kaleidokids/presentation/pages/homepage.dart';
 import 'package:kaleidokids/presentation/pages/login.dart';
-import 'package:kaleidokids/presentation/pages/results.dart';
-import 'package:kaleidokids/presentation/pages/segreto.dart';
-import 'package:kaleidokids/presentation/widget/randomuser.dart';
 
 class Titlepage extends StatefulWidget {
   const Titlepage({Key key, this.title}) : super(key: key);
@@ -16,8 +12,6 @@ class Titlepage extends StatefulWidget {
 }
 
 class _TitlepageState extends State<Titlepage> {
-  final int _counter = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +43,8 @@ class _TitlepageState extends State<Titlepage> {
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => LoginPage())),
+                    //TODO using theme on material design stuff
+                    //style: ButtonStyle(),
                     child: const Text('INIZIA',
                         style: TextStyle(
                           fontSize: 25,

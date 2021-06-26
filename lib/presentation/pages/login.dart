@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kaleidokids/presentation/pages/results.dart';
-import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
-import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/name_bubble_btn.dart';
-import 'package:kaleidokids/presentation/widget/reading_card.dart';
-
-import 'homepage.dart';
 
 class LoginPage extends StatelessWidget {
   @override
