@@ -30,12 +30,12 @@ class ReadingCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Image.network(
                   'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
-                  height: 200,
-                  fit: BoxFit.cover,
+                  height: 100,
+                  fit: BoxFit.contain,
                 ),
                 Flexible(
                   child: Center(

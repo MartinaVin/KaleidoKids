@@ -37,29 +37,32 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Stack(
           fit: StackFit.expand,
           children: [
-            SingleChildScrollView(
-              child: FractionallySizedBox(
-                widthFactor: 0.7,
-                child: Column(
-                  children: [
-                    const Text(
-                      'Ciao!\nCosa vuoi leggere oggi?',
-                    ),
-                    GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        childAspectRatio:
-                            ReadingCard.kWidth / ReadingCard.kHeight,
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 10,
-                        crossAxisSpacing: 10,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                child: FractionallySizedBox(
+                  widthFactor: 0.7,
+                  child: Column(
+                    children: [
+                      const Text(
+                        'Ciao!\nCosa vuoi leggere oggi?',
                       ),
-                      itemBuilder: (context, index) => ReadingCard(),
-                      padding: const EdgeInsets.all(20),
-                      itemCount: 9,
-                      shrinkWrap: true,
-                    ),
-                  ],
+                      GridView.builder(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio:
+                              ReadingCard.kWidth / ReadingCard.kHeight,
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10,
+                        ),
+                        itemBuilder: (context, index) => ReadingCard(),
+                        padding: const EdgeInsets.all(20),
+                        itemCount: 9,
+                        shrinkWrap: true,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             )
