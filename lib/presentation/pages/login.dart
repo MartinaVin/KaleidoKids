@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
         //repeat: ImageRepeat.repeat,
         fit: BoxFit.cover,
@@ -25,17 +25,18 @@ class LoginPage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: ConstrainedBox(
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
                 maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 //childAspectRatio:
                 crossAxisCount: 2,
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
               ),
-              itemBuilder: (context, index) => NameBubbleBtn(name: "nome"),
-              padding: EdgeInsets.all(5),
+              itemBuilder: (context, index) =>
+                  const NameBubbleBtn(name: "nome"),
+              padding: const EdgeInsets.all(5),
               itemCount: 4,
               shrinkWrap: true,
             ),

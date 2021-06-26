@@ -5,7 +5,7 @@ class SecretPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kaleido Kids"),
+        title: const Text("Kaleido Kids"),
       ),
       //drawer: Container,
       body: Column(

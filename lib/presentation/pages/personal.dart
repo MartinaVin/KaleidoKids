@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kaleidokids/presentation/pages/homepage.dart';
-import 'package:kaleidokids/presentation/pages/login.dart';
-import 'package:kaleidokids/presentation/pages/results.dart';
-import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
-import 'package:kaleidokids/presentation/widget/randomuser.dart';
 
 class PersonalPage extends StatefulWidget {
   const PersonalPage({Key key}) : super(key: key);
@@ -18,7 +13,7 @@ class _PersonalPage extends State<PersonalPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
         fit: BoxFit.cover,
         image: AssetImage('assets/images/background.png'),
@@ -36,11 +31,23 @@ class _PersonalPage extends State<PersonalPage> {
           actions: [HelpButton()],
         ),
         drawer: CustomDrawer(),
-        body: Stack(
-          fit: StackFit.expand,
-          children: [
-            Text("Personal page"),
-          ],
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text.rich(TextSpan(text: 'Ciao ', //prendere in input il numero
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'nome' + '!',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).primaryColor))
+                  ])),
+              const Text(
+                  'In questa pagina ci sono tutti i tuoi dati personali,\npuoi modificarli quando vuoi!'),
+            ]),
+          ),
         ),
       ),
     );

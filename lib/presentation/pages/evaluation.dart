@@ -32,7 +32,8 @@ class _EvaluationPage extends State<EvaluationPage> {
           ),
           drawer: CustomDrawer(),
           body: SingleChildScrollView(
-            child: Column(children: [
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text.rich(TextSpan(text: 'Ciao ', //prendere in input il numero
                   children: <TextSpan>[
                     TextSpan(
@@ -61,7 +62,7 @@ class _EvaluationPage extends State<EvaluationPage> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   verticalDirection:
                       VerticalDirection.down, //down=from 4 to 1, up=from 1 to 4
@@ -83,8 +84,9 @@ class _EvaluationPage extends State<EvaluationPage> {
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.bold,
                                   )),
+                              // ignore: prefer_const_constructors
                               Text(
-                                  'Riesci a leggere testi già visti, ma anche testi nuovi,\nsenza bisogno di aiuto e facendo pochi errori.'),
+                                  "Riesci a leggere testi già visti, ma anche testi nuovi,\nsenza bisogno di aiuto e facendo pochi errori."),
                             ],
                           ),
                         )
@@ -113,7 +115,7 @@ class _EvaluationPage extends State<EvaluationPage> {
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.bold,
                                   )),
-                              Text(
+                              const Text(
                                   "Riesci a leggere testi già visti, ma per i testi nuovi\nhai bisogno di un po' di aiuto ma fai pochi errori."),
                             ],
                           ),
@@ -142,7 +144,7 @@ class _EvaluationPage extends State<EvaluationPage> {
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.bold,
                                   )),
-                              Text(
+                              const Text(
                                   "Riesci a leggere testi già visti con non molti errori,\n ma ogni tanto hai bisogno di aiuto o indicazioni\ndall'insegnante."),
                             ],
                           ),
@@ -172,6 +174,7 @@ class _EvaluationPage extends State<EvaluationPage> {
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.bold,
                                   )),
+                              // ignore: prefer_const_constructors
                               Text(
                                   "Riesci a leggere testi semplici, ma con tesi nuovi\nhai qualche difficoltà e hai bisogno\ndell'aiuto dell'insegnante."),
                             ],
@@ -182,46 +185,6 @@ class _EvaluationPage extends State<EvaluationPage> {
                   ],
                 ),
               ),
-
-              /*ListView(
-                padding: EdgeInsets.zero,
-                children: [
-                  Column(
-                    children: [
-                      ListTile(
-                        leading: SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: Image.asset('assets/images/avanzato4Final.png',
-                              fit: BoxFit.cover),
-                        ),
-                        title: Text('Avanzato',
-                            style: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold,
-                            )),
-                        subtitle: const Text(
-                            'Riesci a leggere testi già visti, ma anche testi nuovi, senza bisogno di aiuto e facendo pochi errori.'),
-                      ),
-                      ListTile(
-                        leading: SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: Image.asset('assets/images/intermedio3.png',
-                              fit: BoxFit.cover),
-                        ),
-                        title: Text('Intermedio',
-                            style: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold,
-                            )),
-                        subtitle: Text(
-                            "Riesci a leggere testi già visti, ma per i testi nuovi hai bisogno di un po' di aiuto ma fai pochi errori."),
-                      ),
-                    ],
-                  )
-                ],
-              )*/
             ]),
           )),
     );

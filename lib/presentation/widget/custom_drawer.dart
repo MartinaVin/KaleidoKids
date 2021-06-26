@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/evaluation.dart';
+import 'package:kaleidokids/presentation/pages/history.dart';
 import 'package:kaleidokids/presentation/pages/personal.dart';
 import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
@@ -58,7 +59,7 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => SecretPage(),
+                        builder: (context) => HistoryPage(),
                       ),
                     );
                   },
