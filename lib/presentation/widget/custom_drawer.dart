@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/evaluation.dart';
 import 'package:kaleidokids/presentation/pages/history.dart';
+import 'package:kaleidokids/presentation/pages/login.dart';
 import 'package:kaleidokids/presentation/pages/personal.dart';
-import 'package:kaleidokids/presentation/pages/segreto.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -71,6 +71,17 @@ class CustomDrawer extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => EvaluationPage(),
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  title: const Text('Cambia account',
+                      style: TextStyle(color: Colors.white)),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
                       ),
                     );
                   },

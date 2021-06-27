@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
+import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/name_bubble_btn.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,30 +17,34 @@ class LoginPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          leading: DrawerButton(),
           title: Text(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
-          elevation: 0,
-          actions: [HelpButton()],
           backgroundColor: Colors.transparent,
+          elevation: 0,
+          //actions: [HelpButton()],
         ),
-        body: SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-                maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                //childAspectRatio:
-                crossAxisCount: 2,
-                mainAxisSpacing: 5,
-                crossAxisSpacing: 5,
+        drawer: CustomDrawer(),
+        body: Center(
+          child: SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                  maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  //childAspectRatio:
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                ),
+                itemBuilder: (context, index) =>
+                    const NameBubbleBtn(name: "nome"),
+                padding: const EdgeInsets.all(12),
+                itemCount: 4,
+                shrinkWrap: true,
               ),
-              itemBuilder: (context, index) =>
-                  const NameBubbleBtn(name: "nome"),
-              padding: const EdgeInsets.all(5),
-              itemCount: 4,
-              shrinkWrap: true,
             ),
           ),
         ),
