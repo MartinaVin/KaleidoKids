@@ -54,7 +54,7 @@ class CustomDrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Storia',
+                  title: const Text('Dati letture',
                       style: TextStyle(color: Colors.white)),
                   onTap: () {
                     Navigator.of(context).push(

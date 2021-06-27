@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
+import 'package:kaleidokids/presentation/pages/reading_detail.dart';
 
 class ReadingCard extends StatelessWidget {
   static const double kHeight = 120;
@@ -42,9 +43,9 @@ class ReadingCard extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () =>
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => MyHomePage(),
+                              builder: (context) => const ReadingDetailPage(),
                             )),
-                        child: Text("LEGGI")),
+                        child: const Text("LEGGI")),
                   ),
                 ),
               ],
