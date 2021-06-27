@@ -1,6 +1,6 @@
 # kaleidokids
 
-A new Flutter project.
+KaleidoKids is a web-app service for primary school that allows students to self-evaluate their reading skills
 
 ## Getting Started
 
