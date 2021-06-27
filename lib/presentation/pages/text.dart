@@ -70,6 +70,8 @@ class _TextPage extends State<TextPage> {
                     );
                   },
                   child: const Text('INDIETRO'),
+                  style: ElevatedButton.styleFrom(
+                      primary: Theme.of(context).errorColor),
                 ),
               ],
             ),

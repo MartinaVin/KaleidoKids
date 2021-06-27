@@ -41,11 +41,14 @@ class ReadingCard extends StatelessWidget {
                 Flexible(
                   child: Center(
                     child: ElevatedButton(
-                        onPressed: () =>
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const ReadingDetailPage(),
-                            )),
-                        child: const Text("LEGGI")),
+                      onPressed: () =>
+                          Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ReadingDetailPage(),
+                      )),
+                      child: const Text("LEGGI"),
+                      style: ElevatedButton.styleFrom(
+                          primary: Theme.of(context).primaryColor),
+                    ),
                   ),
                 ),
               ],
