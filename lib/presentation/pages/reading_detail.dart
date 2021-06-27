@@ -60,23 +60,23 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).primaryColor),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {},
                   child: const Text('CARICA UNA REGISTRAZIONE'),
                   style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor),
+                      primary: Theme.of(context).accentColor),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const TextPage(),
                   )),
                   child: const Text('VEDI TESTO'),
                   style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).accentColor),
+                      primary: Theme.of(context).hintColor),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -89,7 +89,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).errorColor),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
               ],
             ),
           ),
