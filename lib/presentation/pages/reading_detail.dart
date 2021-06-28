@@ -56,38 +56,38 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                 const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text('INIZIA, REGISTRA!'),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).primaryColor),
+                  child: const Text('INIZIA, REGISTRA!'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text('CARICA UNA REGISTRAZIONE'),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).accentColor),
+                  child: const Text('CARICA UNA REGISTRAZIONE'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const TextPage(),
                   )),
-                  child: const Text('VEDI TESTO'),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).hintColor),
+                  child: const Text('VEDI TESTO'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => MyHomePage(),
+                        builder: (context) => const MyHomePage(),
                       ),
                     );
                   },
-                  child: const Text('INDIETRO'),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).errorColor),
+                  child: const Text('INDIETRO'),
                 ),
                 const SizedBox(height: 5),
               ],

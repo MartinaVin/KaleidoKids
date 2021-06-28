@@ -50,17 +50,19 @@ class _HistoryPage extends State<HistoryPage> {
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {},
-                    child: const Text('Letture già fatte'),
+                    style: ElevatedButton.styleFrom(
+                        primary: Theme.of(context).primaryColor),
+                    child: const Text('LETTURE SVOLTE'),
                   ),
                   const SizedBox(height: 10),
-                  ElevatedButton(
+                  const ElevatedButton(
                     onPressed: null,
-                    child: const Text('Dati annuali'),
+                    child: Text('DATI ANNUALI'),
                   ),
                   const SizedBox(height: 10),
-                  ElevatedButton(
+                  const ElevatedButton(
                     onPressed: null,
-                    child: const Text('Dati mensili'),
+                    child: Text('DATI MENSILI'),
                   ),
                 ],
               ),

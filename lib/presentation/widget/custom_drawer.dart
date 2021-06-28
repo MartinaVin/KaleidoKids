@@ -35,7 +35,7 @@ class CustomDrawer extends StatelessWidget {
                     //change state
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => MyHomePage(),
+                        builder: (context) => const MyHomePage(),
                       ),
                     );
                   },
@@ -48,7 +48,7 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => PersonalPage(),
+                        builder: (context) => const PersonalPage(),
                       ),
                     );
                   },
@@ -59,7 +59,7 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => HistoryPage(),
+                        builder: (context) => const HistoryPage(),
                       ),
                     );
                   },
@@ -70,7 +70,7 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => EvaluationPage(),
+                        builder: (context) => const EvaluationPage(),
                       ),
                     );
                   },

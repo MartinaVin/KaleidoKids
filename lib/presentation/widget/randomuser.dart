@@ -12,7 +12,7 @@ class RandomUser extends StatelessWidget {
           return Text(snapshot.data);
         }
         if (snapshot.hasError) {
-          return Text(":c");
+          return const Text(":c");
         } else {
           return const LinearProgressIndicator();
         }

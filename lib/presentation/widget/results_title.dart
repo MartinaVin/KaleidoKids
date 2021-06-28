@@ -5,7 +5,7 @@ class ResultTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
+        const Text(
           "Risultati di",
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.black),
@@ -17,7 +17,7 @@ class ResultTitle extends StatelessWidget {
               color: Theme.of(context).primaryColor,
               fontWeight: FontWeight.bold),
         ),
-        Text(
+        const Text(
           "dd/mm/yyyy - hh:mm",
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.black),

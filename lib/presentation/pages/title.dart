@@ -43,11 +43,11 @@ class _TitlepageState extends State<Titlepage> {
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => LoginPage())),
+                    style: ElevatedButton.styleFrom(
+                        primary: Theme.of(context).primaryColor),
                     //TODO using theme on material design stuff
                     //style: ButtonStyle(),
                     child: const Text('INIZIA'),
-                    style: ElevatedButton.styleFrom(
-                        primary: Theme.of(context).primaryColor),
                   )
                 ],
               ))

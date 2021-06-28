@@ -26,6 +26,7 @@ class ResultsPage extends StatelessWidget {
         drawer: CustomDrawer(),
         body: Stack(
           fit: StackFit.expand,
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
             //ResultTitle(),
             //MarkImage(level: 2, mark: "Base"),
