@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
-import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/name_bubble_btn.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,7 +15,7 @@ class LoginPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          leading: DrawerButton(),
+          //leading: DrawerButton(),
           title: Text(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
@@ -26,9 +24,9 @@ class LoginPage extends StatelessWidget {
           elevation: 0,
           //actions: [HelpButton()],
         ),
-        drawer: CustomDrawer(),
-        body: Center(
-          child: SingleChildScrollView(
+        //drawer: CustomDrawer(),
+        body: SingleChildScrollView(
+          child: Center(
             child: ConstrainedBox(
               constraints: const BoxConstraints(
                   maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
@@ -39,8 +37,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisSpacing: 5,
                   crossAxisSpacing: 5,
                 ),
-                itemBuilder: (context, index) =>
-                    const NameBubbleBtn(name: "nome"),
+                itemBuilder: (context, index) => NameBubbleBtn(name: "nome"),
                 padding: const EdgeInsets.all(12),
                 itemCount: 4,
                 shrinkWrap: true,

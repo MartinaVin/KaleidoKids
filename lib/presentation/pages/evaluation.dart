@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
+import 'package:kaleidokids/presentation/widget/mark.dart';
 
 class EvaluationPage extends StatefulWidget {
   const EvaluationPage({Key key}) : super(key: key);
@@ -19,21 +20,22 @@ class _EvaluationPage extends State<EvaluationPage> {
         image: AssetImage('assets/images/background.png'),
       )),
       child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            leading: DrawerButton(),
-            title: Text(
-              "Kaleido Kids",
-              style: TextStyle(color: Theme.of(context).primaryColor),
-            ),
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            actions: [HelpButton()],
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          leading: DrawerButton(),
+          title: Text(
+            "Kaleido Kids",
+            style: TextStyle(color: Theme.of(context).primaryColor),
           ),
-          drawer: CustomDrawer(),
-          body: SingleChildScrollView(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [HelpButton()],
+        ),
+        drawer: CustomDrawer(),
+        body: SingleChildScrollView(
+          child: Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            children: [
               Text.rich(TextSpan(text: 'Ciao ', //prendere in input il numero
                   children: <TextSpan>[
                     TextSpan(
@@ -59,134 +61,45 @@ class _EvaluationPage extends State<EvaluationPage> {
                     ]),
                 textAlign: TextAlign.center,
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  verticalDirection:
-                      VerticalDirection.down, //down=from 4 to 1, up=from 1 to 4
-                  children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 70,
-                          height: 70,
-                          child: Image.asset('assets/images/avanzato4Final.png',
-                              fit: BoxFit.cover),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text('Avanzato',
-                                  style: TextStyle(
-                                    color: Theme.of(context).primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              // ignore: prefer_const_constructors
-                              Text(
-                                  "Riesci a leggere testi già visti, ma anche testi nuovi,\nsenza bisogno di aiuto e facendo pochi errori."),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    //------------------------------------------------------------------
-
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 70,
-                          height: 70,
-                          child: Image.asset(
-                              'assets/images/intermedio3Final.png',
-                              fit: BoxFit.cover),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text('intermedio:',
-                                  style: TextStyle(
-                                    color: Theme.of(context).primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              const Text(
-                                  "Riesci a leggere testi già visti, ma per i testi nuovi\nhai bisogno di un po' di aiuto ma fai pochi errori."),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    //------------------------------------------------------------------
-
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 70,
-                          height: 70,
-                          child: Image.asset('assets/images/base2Final.png',
-                              fit: BoxFit.cover),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text('Base:',
-                                  style: TextStyle(
-                                    color: Theme.of(context).primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              const Text(
-                                  "Riesci a leggere testi già visti con non molti errori,\n ma ogni tanto hai bisogno di aiuto o indicazioni\ndall'insegnante."),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    //------------------------------------------------------------------
-
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 70,
-                          height: 70,
-                          child: Image.asset(
-                              'assets/images/acquisizione1Final.png',
-                              fit: BoxFit.cover),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text('In via di prima acquisizione:',
-                                  style: TextStyle(
-                                    color: Theme.of(context).primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              // ignore: prefer_const_constructors
-                              Text(
-                                  "Riesci a leggere testi semplici, ma con tesi nuovi\nhai qualche difficoltà e hai bisogno\ndell'aiuto dell'insegnante."),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+              const SizedBox(height: 10),
+              Column(
+                //crossAxisAlignment: CrossAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const Mark(
+                    level: 4,
+                    imgPath: 'assets/images/avanzato4Final.png',
+                    markTitle: 'Avanzato',
+                    markDefinition:
+                        'Riesci a leggere testi già visti, ma anche testi nuovi,\nsenza bisogno di aiuto e facendo pochi errori.',
+                  ),
+                  const Mark(
+                    level: 3,
+                    imgPath: 'assets/images/intermedio3Final.png',
+                    markTitle: 'Intermedio',
+                    markDefinition:
+                        "Riesci a leggere testi già visti, ma per i testi nuovi\nhai bisogno di un po' di aiuto ma fai pochi errori.",
+                  ),
+                  const Mark(
+                    level: 2,
+                    imgPath: 'assets/images/base2Final.png',
+                    markTitle: 'Base',
+                    markDefinition:
+                        "Riesci a leggere testi già visti con non molti errori,\n ma ogni tanto hai bisogno di aiuto o indicazioni\ndall'insegnante.",
+                  ),
+                  const Mark(
+                    level: 1,
+                    imgPath: 'assets/images/acquisizione1Final.png',
+                    markTitle: 'In via di prima acquisizione',
+                    markDefinition:
+                        "Riesci a leggere testi semplici, ma con tesi nuovi\nhai qualche difficoltà e hai bisogno\ndell'aiuto dell'insegnante.",
+                  ),
+                ],
               ),
-            ]),
-          )),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

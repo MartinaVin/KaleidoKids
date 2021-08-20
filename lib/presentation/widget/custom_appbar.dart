@@ -20,10 +20,11 @@ class HelpButton extends StatelessWidget {
     return TextButton(
         onPressed: () => 0,
         style: ButtonStyle(
-            shape:
-                MaterialStateProperty.resolveWith((states) => CircleBorder()),
+            shape: MaterialStateProperty.resolveWith(
+                (states) => const CircleBorder()),
             backgroundColor: MaterialStateProperty.resolveWith(
-              (states) => Theme.of(context).primaryColor,
+              //(states) => Theme.of(context).primaryColor,
+              (states) => Theme.of(context).disabledColor,
             )),
         child: Text('?',
             style: Theme.of(context)
