@@ -35,9 +35,9 @@ class _TitlepageState extends State<Titlepage> {
                     height: 20,
                   ),
                   Image.asset(
-                    'assets/images/titolo.png',
+                    "assets/images/title.png",
                     fit: BoxFit.cover,
-                    height: 20,
+                    height: 50,
                   ),
                   //Text("Kaleido\nKids"),
                   ElevatedButton(
