@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/compute_size.dart';
 
 class ResponsiveText extends StatelessWidget {
   const ResponsiveText(this.text, {Key key, this.style, this.textAlign})
@@ -18,7 +19,7 @@ class ResponsiveText extends StatelessWidget {
       textAlign: textAlign,
     );
   }
-
+/*
   double computeSize(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final baseSize = Theme.of(context).textTheme.bodyText2.fontSize;
@@ -32,4 +33,5 @@ class ResponsiveText extends StatelessWidget {
     }
     return textSize;
   }
+*/
 }
