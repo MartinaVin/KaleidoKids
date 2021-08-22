@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class PersonalPage extends StatefulWidget {
   const PersonalPage({Key key}) : super(key: key);
@@ -22,7 +23,7 @@ class _PersonalPage extends State<PersonalPage> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           leading: DrawerButton(),
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -48,7 +49,7 @@ class _PersonalPage extends State<PersonalPage> {
                                   fontWeight: FontWeight.bold,
                                   color: Theme.of(context).primaryColor))
                         ])),
-                    const Text(
+                    const ResponsiveText(
                         'In questa pagina ci sono tutti i tuoi dati personali,\npuoi modificarli quando vuoi!'),
                   ],
                 ),
@@ -72,14 +73,14 @@ class _PersonalPage extends State<PersonalPage> {
                             children: [
                               Row(
                                 children: [
-                                  Text(
+                                  ResponsiveText(
                                     "Scuola:",
                                     textAlign: TextAlign.left,
                                     style:
                                         Theme.of(context).textTheme.headline6,
                                   ),
                                   // ignore: prefer_const_constructors
-                                  Text(
+                                  ResponsiveText(
                                     "---",
                                     textAlign: TextAlign.right,
                                   ),
@@ -87,14 +88,14 @@ class _PersonalPage extends State<PersonalPage> {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  ResponsiveText(
                                     "Classe:",
                                     textAlign: TextAlign.left,
                                     style:
                                         Theme.of(context).textTheme.headline6,
                                   ),
                                   // ignore: prefer_const_constructors
-                                  Text(
+                                  ResponsiveText(
                                     "---",
                                     textAlign: TextAlign.right,
                                   ),
@@ -102,14 +103,14 @@ class _PersonalPage extends State<PersonalPage> {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  ResponsiveText(
                                     "Insegnante:",
                                     textAlign: TextAlign.left,
                                     style:
                                         Theme.of(context).textTheme.headline6,
                                   ),
                                   // ignore: prefer_const_constructors
-                                  Text(
+                                  ResponsiveText(
                                     "---",
                                     textAlign: TextAlign.right,
                                   ),
@@ -135,7 +136,7 @@ class _PersonalPage extends State<PersonalPage> {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               // ignore: prefer_const_constructors
-                              Text(
+                              ResponsiveText(
                                 "Info lettura",
                                 textAlign: TextAlign.center,
                               ),

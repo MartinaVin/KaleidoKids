@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class ResultsPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -30,7 +31,7 @@ class ResultsPage extends StatelessWidget {
           children: [
             //ResultTitle(),
             //MarkImage(level: 2, mark: "Base"),
-            const Text(
+            const ResponsiveText(
               'Hello there, this will be the RESULT PAGE',
               style: TextStyle(color: Colors.white),
             ),

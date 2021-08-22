@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/reading_card.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
@@ -32,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),*/
-            title: Text(
+            title: ResponsiveText(
               "Kaleido Kids",
               style: TextStyle(color: Theme.of(context).primaryColor),
             ),
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     widthFactor: 0.7,
                     child: Column(
                       children: [
-                        const Text(
+                        const ResponsiveText(
                           'Ciao!\nCosa vuoi leggere oggi?',
                         ),
                         GridView.builder(

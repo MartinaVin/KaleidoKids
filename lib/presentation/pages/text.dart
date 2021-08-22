@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/reading_detail.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class TextPage extends StatefulWidget {
   const TextPage({Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class _TextPage extends State<TextPage> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           leading: DrawerButton(),
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -55,7 +56,7 @@ class _TextPage extends State<TextPage> {
                       color: Colors.white,
                       border: Border.all(
                           color: Theme.of(context).primaryColor, width: 2)),
-                  child: const Text(
+                  child: const ResponsiveText(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt sapien lectus, nec varius ligula tempor nec. Vestibulum feugiat tempor orci non rutrum. Aliquam finibus iaculis bibendum. Morbi eu condimentum justo, et venenatis tellus.\nIn eu ex eget lectus tristique tempus. Phasellus ultricies lacus tellus, in condimentum odio interdum ullamcorper. Nulla blandit aliquet tristique. Nam pharetra aliquet urna, quis laoreet leo consequat at. Duis rhoncus eget mi et suscipit.\n" +
                         "Aenean efficitur ante at mauris congue, eu tempus metus lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst.\nPhasellus id turpis non nisl laoreet scelerisque id sit amet ante.",
                     //style: TextStyle(color: Theme.of(context).primaryColor),
@@ -71,7 +72,7 @@ class _TextPage extends State<TextPage> {
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).errorColor),
-                  child: const Text('INDIETRO'),
+                  child: const ResponsiveText('INDIETRO'),
                 ),
               ],
             ),

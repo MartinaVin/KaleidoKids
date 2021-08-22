@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/text.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 import 'homepage.dart';
 
@@ -25,7 +26,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           leading: DrawerButton(),
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -40,10 +41,13 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(
-                  'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
-                  height: 100,
-                  fit: BoxFit.contain,
+                FractionallySizedBox(
+                  widthFactor: 0.8,
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
+                    //height: 100,
+                    fit: BoxFit.contain,
+                  ),
                 ),
                 const SizedBox(height: 10),
                 Text.rich(TextSpan(text: 'Ok, leggi\n', children: <TextSpan>[
@@ -55,17 +59,35 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                 ])),
                 const SizedBox(height: 10),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                ResponsiveText("jdhjshgusozo iusiudfg bdfs"),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: const ResponsiveText('Ok'))
+                              ],
+                            ),
+                          );
+                        });
+                  },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).primaryColor),
-                  child: const Text('INIZIA, REGISTRA!'),
+                  child: const ResponsiveText('INIZIA, REGISTRA!'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).accentColor),
-                  child: const Text('CARICA UNA REGISTRAZIONE'),
+                  child: const ResponsiveText('CARICA UNA REGISTRAZIONE'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
@@ -74,7 +96,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                   )),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).hintColor),
-                  child: const Text('VEDI TESTO'),
+                  child: const ResponsiveText('VEDI TESTO'),
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
@@ -87,7 +109,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).errorColor),
-                  child: const Text('INDIETRO'),
+                  child: const ResponsiveText('INDIETRO'),
                 ),
                 const SizedBox(height: 5),
               ],

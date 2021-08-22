@@ -2,11 +2,11 @@ import "dart:math";
 
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class NameBubbleBtn extends StatelessWidget {
   final _random = Random();
   final String name;
-  //TODO make random color work
   NameBubbleBtn({Key key, @required this.name}) : super(key: key);
 
   @override
@@ -17,6 +17,7 @@ class NameBubbleBtn extends StatelessWidget {
       Theme.of(context).hintColor
     ];
     final randColor = colorList[_random.nextInt(colorList.length)];
+
     return TextButton(
         onPressed: () => Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const MyHomePage(),
@@ -28,7 +29,7 @@ class NameBubbleBtn extends StatelessWidget {
               //(states) => (colorList..shuffle()).first,
               (states) => randColor,
             )),
-        child: Text(
+        child: ResponsiveText(
           name,
           style: Theme.of(context)
               .textTheme

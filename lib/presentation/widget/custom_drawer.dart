@@ -4,92 +4,89 @@ import 'package:kaleidokids/presentation/pages/history.dart';
 import 'package:kaleidokids/presentation/pages/login.dart';
 import 'package:kaleidokids/presentation/pages/personal.dart';
 import 'package:kaleidokids/presentation/pages/homepage.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-            child: const Text(
-              'Kaleido\nkids\n- menu -',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+      child: Container(
+        color: Theme.of(context).primaryColor,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              //decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+              child: const ResponsiveText(
+                'Kaleido\nkids\n- menu -',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
-          ),
-          Container(
-            color: Theme.of(context).primaryColor,
-            child: Column(
-              children: [
-                ListTile(
-                  title:
-                      const Text('Home', style: TextStyle(color: Colors.white)),
-                  onTap: () {
-                    //Navigator.of(context).pop();
-                    //change state
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const MyHomePage(),
-                      ),
-                    );
-                  },
-                  //then close the drawer
-                  //Navigator.pop(context);
-                ),
-                ListTile(
-                  title: const Text('Pagina Personale',
-                      style: TextStyle(color: Colors.white)),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const PersonalPage(),
-                      ),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Dati letture',
-                      style: TextStyle(color: Colors.white)),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const HistoryPage(),
-                      ),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Metodo di valutazione',
-                      style: TextStyle(color: Colors.white)),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const EvaluationPage(),
-                      ),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Cambia account',
-                      style: TextStyle(color: Colors.white)),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => LoginPage(),
-                      ),
-                    );
-                  },
-                ),
-              ],
+            ListTile(
+              title: const ResponsiveText('Home',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                //Navigator.of(context).pop();
+                //change state
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyHomePage(),
+                  ),
+                );
+              },
+              //then close the drawer
+              //Navigator.pop(context);
             ),
-          ),
-        ],
+            ListTile(
+              title: const ResponsiveText('Pagina Personale',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const PersonalPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const ResponsiveText('Dati letture',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const HistoryPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const ResponsiveText('Metodo di valutazione',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const EvaluationPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const ResponsiveText('Cambia account',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

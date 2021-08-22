@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/pages/reading_detail.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class ReadingCard extends StatelessWidget {
   static const double kHeight = 120;
@@ -24,7 +25,7 @@ class ReadingCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              ResponsiveText(
                 "Reading title",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headline6,
@@ -46,7 +47,7 @@ class ReadingCard extends StatelessWidget {
                     )),
                     style: ElevatedButton.styleFrom(
                         primary: Theme.of(context).primaryColor),
-                    child: const Text("LEGGI"),
+                    child: const ResponsiveText("LEGGI"),
                   ),
                 ),
               ),

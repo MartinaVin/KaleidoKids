@@ -1,6 +1,7 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 import 'package:kaleidokids/presentation/pages/login.dart';
 
 class Titlepage extends StatefulWidget {
@@ -39,7 +40,7 @@ class _TitlepageState extends State<Titlepage> {
                     fit: BoxFit.cover,
                     height: 50,
                   ),
-                  //Text("Kaleido\nKids"),
+                  //ResponsiveText("Kaleido\nKids"),
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => LoginPage())),
@@ -47,7 +48,7 @@ class _TitlepageState extends State<Titlepage> {
                         primary: Theme.of(context).primaryColor),
                     //TODO using theme on material design stuff
                     //style: ButtonStyle(),
-                    child: const Text('INIZIA'),
+                    child: const ResponsiveText('INIZIA'),
                   )
                 ],
               ))

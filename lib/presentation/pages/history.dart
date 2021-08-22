@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({Key key}) : super(key: key);
@@ -22,7 +23,7 @@ class _HistoryPage extends State<HistoryPage> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             leading: DrawerButton(),
-            title: Text(
+            title: ResponsiveText(
               "Kaleido Kids",
               style: TextStyle(color: Theme.of(context).primaryColor),
             ),
@@ -46,23 +47,24 @@ class _HistoryPage extends State<HistoryPage> {
                                 fontWeight: FontWeight.bold,
                                 color: Theme.of(context).primaryColor))
                       ])),
-                  const Text('Qui trovi tutti i dati sulle tue letture!'),
+                  const ResponsiveText(
+                      'Qui trovi tutti i dati sulle tue letture!'),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         primary: Theme.of(context).primaryColor),
-                    child: const Text('LETTURE SVOLTE'),
+                    child: const ResponsiveText('LETTURE SVOLTE'),
                   ),
                   const SizedBox(height: 10),
                   const ElevatedButton(
                     onPressed: null,
-                    child: Text('DATI ANNUALI'),
+                    child: ResponsiveText('DATI ANNUALI'),
                   ),
                   const SizedBox(height: 10),
                   const ElevatedButton(
                     onPressed: null,
-                    child: Text('DATI MENSILI'),
+                    child: ResponsiveText('DATI MENSILI'),
                   ),
                 ],
               ),

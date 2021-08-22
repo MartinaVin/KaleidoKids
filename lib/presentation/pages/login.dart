@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:faker/faker.dart';
 import 'package:kaleidokids/presentation/widget/name_bubble_btn.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final fakeName = Faker();
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
@@ -16,7 +19,7 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           //leading: DrawerButton(),
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -37,7 +40,8 @@ class LoginPage extends StatelessWidget {
                   mainAxisSpacing: 5,
                   crossAxisSpacing: 5,
                 ),
-                itemBuilder: (context, index) => NameBubbleBtn(name: "nome"),
+                itemBuilder: (context, index) =>
+                    NameBubbleBtn(name: fakeName.person.firstName()),
                 padding: const EdgeInsets.all(12),
                 itemCount: 4,
                 shrinkWrap: true,

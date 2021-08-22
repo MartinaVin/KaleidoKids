@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
 import 'package:kaleidokids/presentation/widget/mark.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class EvaluationPage extends StatefulWidget {
   const EvaluationPage({Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class _EvaluationPage extends State<EvaluationPage> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           leading: DrawerButton(),
-          title: Text(
+          title: ResponsiveText(
             "Kaleido Kids",
             style: TextStyle(color: Theme.of(context).primaryColor),
           ),
@@ -44,7 +45,7 @@ class _EvaluationPage extends State<EvaluationPage> {
                             fontWeight: FontWeight.bold,
                             color: Theme.of(context).primaryColor))
                   ])),
-              const Text(
+              const ResponsiveText(
                   'In questa pagine ti mostriamo come funziona la valutazione in Kaleido Kids!'),
               const SizedBox(height: 20),
               Text.rich(

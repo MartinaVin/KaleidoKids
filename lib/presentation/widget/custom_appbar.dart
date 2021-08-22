@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 //if you want to customize the button that opens the drawer (for instance, with the logo)
 class DrawerButton extends StatelessWidget {
@@ -26,7 +27,7 @@ class HelpButton extends StatelessWidget {
               //(states) => Theme.of(context).primaryColor,
               (states) => Theme.of(context).disabledColor,
             )),
-        child: Text('?',
+        child: ResponsiveText('?',
             style: Theme.of(context)
                 .textTheme
                 .headline4

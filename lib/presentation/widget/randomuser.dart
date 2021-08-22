@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/futures.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class RandomUser extends StatelessWidget {
   const RandomUser();
@@ -9,10 +10,10 @@ class RandomUser extends StatelessWidget {
       future: fetch_data(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Text(snapshot.data);
+          return ResponsiveText(snapshot.data);
         }
         if (snapshot.hasError) {
-          return const Text(":c");
+          return const ResponsiveText(":c");
         } else {
           return const LinearProgressIndicator();
         }

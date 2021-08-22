@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 
 class Mark extends StatelessWidget {
   final int level;
@@ -53,7 +54,7 @@ class Mark extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(markDefinition),
+                  ResponsiveText(markDefinition),
                 ],
               ))
         ],
