@@ -67,12 +67,13 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                             content: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                ResponsiveText("jdhjshgusozo iusiudfg bdfs"),
+                                const ResponsiveText("La presente versione di Kaleido Kids è un prototipo\ne non permette ancora di eseguire questa azione."),
                                 ElevatedButton(
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
-                                    child: const ResponsiveText('Ok'))
+                                    style: ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
+                                    child: const ResponsiveText('OK'))
                               ],
                             ),
                           );
@@ -84,7 +85,26 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                 ),
                 const SizedBox(height: 5),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const ResponsiveText("La presente versione di Kaleido Kids è un prototipo\ne non permette ancora di eseguire questa azione."),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    style: ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
+                                    child: const ResponsiveText('OK'))
+                              ],
+                            ),
+                          );
+                        });
+                  },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).accentColor),
                   child: const ResponsiveText('CARICA UNA REGISTRAZIONE'),

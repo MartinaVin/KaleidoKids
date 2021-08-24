@@ -15,9 +15,8 @@ class CustomDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              //decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-              child: const ResponsiveText(
+            const DrawerHeader(
+              child: ResponsiveText(
                 'Kaleido\nkids\n- menu -',
                 style: TextStyle(
                   color: Colors.white,

@@ -9,47 +9,49 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final fakeName = Faker();
     return Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        //repeat: ImageRepeat.repeat,
-        fit: BoxFit.cover,
-        image: AssetImage('assets/images/background.png'),
-      )),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          //leading: DrawerButton(),
-          title: ResponsiveText(
-            "Kaleido Kids",
-            style: TextStyle(color: Theme.of(context).primaryColor),
-          ),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          //repeat: ImageRepeat.repeat,
+          fit: BoxFit.cover,
+          image: AssetImage('assets/images/background.png'),
+        )),
+        child: Scaffold(
           backgroundColor: Colors.transparent,
-          elevation: 0,
-          //actions: [HelpButton()],
-        ),
-        //drawer: CustomDrawer(),
-        body: SingleChildScrollView(
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(
-                  maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  //childAspectRatio:
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 5,
-                  crossAxisSpacing: 5,
+          appBar: AppBar(
+            //leading: DrawerButton(),
+            title: ResponsiveText(
+              "Kaleido Kids",
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            ),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            //actions: [HelpButton()],
+          ),
+          //drawer: CustomDrawer(),
+          body: SingleChildScrollView(
+            child: Center(
+              child: FractionallySizedBox(
+                widthFactor: 0.4,
+              //ConstrainedBox(
+                //constraints: const BoxConstraints(
+                //    maxHeight: 400, maxWidth: 400, minHeight: 200, minWidth: 200),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    //childAspectRatio:
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                  ),
+                  itemBuilder: (context, index) =>
+                      NameBubbleBtn(name: fakeName.person.firstName()),
+                  padding: const EdgeInsets.all(12),
+                  itemCount: 6,
+                  shrinkWrap: true,
                 ),
-                itemBuilder: (context, index) =>
-                    NameBubbleBtn(name: fakeName.person.firstName()),
-                padding: const EdgeInsets.all(12),
-                itemCount: 4,
-                shrinkWrap: true,
               ),
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

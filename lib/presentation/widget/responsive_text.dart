@@ -11,7 +11,7 @@ class ResponsiveText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double textSize = computeSize(context);
+    final double textSize = computeSize(context);
     return Text(
       text,
       style:
@@ -19,19 +19,4 @@ class ResponsiveText extends StatelessWidget {
       textAlign: textAlign,
     );
   }
-/*
-  double computeSize(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final baseSize = Theme.of(context).textTheme.bodyText2.fontSize;
-    double textSize = baseSize;
-    const double desktopLimit = 720;
-    const double tabletLimit = 400;
-    if (width > desktopLimit) {
-      textSize = baseSize * 1.5;
-    } else if (width > tabletLimit) {
-      textSize = baseSize * 1.25;
-    }
-    return textSize;
-  }
-*/
 }

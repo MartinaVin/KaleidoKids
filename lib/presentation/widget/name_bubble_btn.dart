@@ -14,7 +14,20 @@ class NameBubbleBtn extends StatelessWidget {
     final colorList = [
       Theme.of(context).accentColor,
       Theme.of(context).primaryColor,
-      Theme.of(context).hintColor
+      Theme.of(context).hintColor,
+      Theme.of(context).accentColor,
+      Theme.of(context).primaryColor,
+      Colors.deepPurpleAccent,
+      Colors.indigo,
+      Colors.redAccent,
+      Colors.blueGrey,
+      Colors.green,
+      Colors.pink,
+      Colors.orange,
+      Colors.purpleAccent,
+      Colors.pinkAccent,
+      Colors.lime,
+      Colors.blueAccent,
     ];
     final randColor = colorList[_random.nextInt(colorList.length)];
 
