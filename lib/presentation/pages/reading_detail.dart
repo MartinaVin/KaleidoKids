@@ -42,7 +42,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FractionallySizedBox(
-                  widthFactor: 0.8,
+                  widthFactor: 0.6,
                   child: Image.network(
                     'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
                     //height: 100,

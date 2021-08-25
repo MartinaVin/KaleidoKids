@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaleidokids/presentation/widget/responsive_text.dart';
+import 'package:kaleidokids/presentation/widget/responsive_text_span.dart';
 
 class Mark extends StatelessWidget {
   final int level;
@@ -35,6 +36,7 @@ class Mark extends StatelessWidget {
                 children: [
                   Row(
                     children: [
+                      //ResponsiveTextSpan('Livello $level : ', markTitle, FontWeight.bold, Theme.of(context).primaryColor)
                       Text.rich(
                         TextSpan(
                             text:

@@ -58,7 +58,8 @@ class _TextPage extends State<TextPage> {
                           color: Theme.of(context).primaryColor, width: 2)),
                   child: const ResponsiveText(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt sapien lectus, nec varius ligula tempor nec. Vestibulum feugiat tempor orci non rutrum. Aliquam finibus iaculis bibendum. Morbi eu condimentum justo, et venenatis tellus.\nIn eu ex eget lectus tristique tempus. Phasellus ultricies lacus tellus, in condimentum odio interdum ullamcorper. Nulla blandit aliquet tristique. Nam pharetra aliquet urna, quis laoreet leo consequat at. Duis rhoncus eget mi et suscipit.\n" +
-                        "Aenean efficitur ante at mauris congue, eu tempus metus lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst.\nPhasellus id turpis non nisl laoreet scelerisque id sit amet ante.",
+                        "Aenean efficitur ante at mauris congue, eu tempus metus lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst.\nPhasellus id turpis non nisl laoreet scelerisque id sit amet ante.\n"
+                        //+"Aliquam finibus iaculis bibendum. Morbi eu condimentum justo, et venenatis tellus.\nIn eu ex eget lectus tristique tempus. Phasellus ultricies lacus tellus, in condimentum odio interdum ullamcorper. Nulla blandit aliquet tristique. Nam pharetra aliquet urna, quis laoreet leo consequat at. Duis rhoncus eget mi et suscipit.\n"
                     //style: TextStyle(color: Theme.of(context).primaryColor),
                   ),
                 ),
