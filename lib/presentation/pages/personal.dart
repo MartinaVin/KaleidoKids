@@ -56,68 +56,110 @@ class _PersonalPage extends State<PersonalPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(
-                          color: Theme.of(context).primaryColor,
-                          width: 2.0,
+                    Column(
+                      children: [
+                        Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            side: BorderSide(
+                              color: Theme.of(context).primaryColor,
+                              width: 2.0,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    children: [
+                                      ResponsiveText(
+                                        "Scuola:",
+                                        textAlign: TextAlign.left,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      // ignore: prefer_const_constructors
+                                      ResponsiveText(
+                                        "---",
+                                        textAlign: TextAlign.right,
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      ResponsiveText(
+                                        "Classe:",
+                                        textAlign: TextAlign.left,
+                                        style:
+                                            Theme.of(context).textTheme.headline6,
+                                      ),
+                                      // ignore: prefer_const_constructors
+                                      ResponsiveText(
+                                        "---",
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      ResponsiveText(
+                                        "Insegnante:",
+                                        textAlign: TextAlign.left,
+                                        style:
+                                            Theme.of(context).textTheme.headline6,
+                                      ),
+                                      // ignore: prefer_const_constructors
+                                      ResponsiveText(
+                                        "---",
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                
+                                ]),
+                          ),
                         ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  ResponsiveText(
-                                    "Scuola:",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        Theme.of(context).textTheme.headline6,
-                                  ),
-                                  // ignore: prefer_const_constructors
-                                  ResponsiveText(
-                                    "---",
-                                    textAlign: TextAlign.right,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  ResponsiveText(
-                                    "Classe:",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        Theme.of(context).textTheme.headline6,
-                                  ),
-                                  // ignore: prefer_const_constructors
-                                  ResponsiveText(
-                                    "---",
-                                    textAlign: TextAlign.right,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  ResponsiveText(
-                                    "Insegnante:",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        Theme.of(context).textTheme.headline6,
-                                  ),
-                                  // ignore: prefer_const_constructors
-                                  ResponsiveText(
-                                    "---",
-                                    textAlign: TextAlign.right,
-                                  ),
-                                ],
-                              ),
-                            ]),
-                      ),
+                        ElevatedButton(
+                                        onPressed: () {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return AlertDialog(
+                                                  content: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      const ResponsiveText(
+                                                          "La presente versione di Kaleido Kids è un prototipo\ne non permette ancora di eseguire questa azione."),
+                                                      ElevatedButton(
+                                                          onPressed: () {
+                                                            Navigator.of(
+                                                                    context)
+                                                                .pop();
+                                                          },
+                                                          style: ElevatedButton.styleFrom(
+                                                              primary: Theme.of(
+                                                                      context)
+                                                                  .primaryColor),
+                                                          child:
+                                                              const ResponsiveText(
+                                                                  'OK'))
+                                                    ],
+                                                  ),
+                                                );
+                                              });
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                            primary:
+                                                Theme.of(context).primaryColor),
+                                        child: const ResponsiveText(
+                                            'INSERISCI CODICE CLASSE'),
+                                      ),
+                      ],
                     ),
                     Card(
                       shape: RoundedRectangleBorder(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kaleidokids/mockup_data.dart';
+import 'package:kaleidokids/presentation/models/reading.dart';
 import 'package:kaleidokids/presentation/pages/text.dart';
 import 'package:kaleidokids/presentation/widget/custom_appbar.dart';
 import 'package:kaleidokids/presentation/widget/custom_drawer.dart';
@@ -7,13 +9,23 @@ import 'package:kaleidokids/presentation/widget/responsive_text.dart';
 import 'homepage.dart';
 
 class ReadingDetailPage extends StatefulWidget {
-  const ReadingDetailPage({Key key}) : super(key: key);
+  final int chosenId;
+
+  const ReadingDetailPage({Key key, @required this.chosenId}): super(key: key);
 
   @override
-  _ReadingDetailPage createState() => _ReadingDetailPage();
+  // ignore: no_logic_in_create_state
+  _ReadingDetailPage createState() => _ReadingDetailPage(chosenId: chosenId);
 }
 
 class _ReadingDetailPage extends State<ReadingDetailPage> {
+//class ReadingDetailPage extends StatelessWidget{
+  final int chosenId;
+
+  _ReadingDetailPage({@required this.chosenId});
+  //ReadingDetailPage({Key key, @required this.chosen_id}) : super(key: key);
+
+  final List<Reading> _readings = readingsList;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,9 +54,10 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FractionallySizedBox(
-                  widthFactor: 0.6,
+                  widthFactor: 0.5,
                   child: Image.network(
-                    'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
+                    //'https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
+                    _readings[chosenId].imgLink,
                     //height: 100,
                     fit: BoxFit.contain,
                   ),
@@ -52,7 +65,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                 const SizedBox(height: 10),
                 Text.rich(TextSpan(text: 'Ok, leggi\n', children: <TextSpan>[
                   TextSpan(
-                      text: 'titolo del testo', //TODO da prendere in input
+                      text:  _readings[chosenId].title,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).primaryColor))
@@ -112,7 +125,7 @@ class _ReadingDetailPage extends State<ReadingDetailPage> {
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const TextPage(),
+                    builder: (context) => TextPage(chosenId: chosenId,),
                   )),
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).hintColor),

@@ -53,20 +53,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Column(
                       children: [
                         const ResponsiveText(
-                          'Ciao!\nCosa vuoi leggere oggi?',
+                          'Ciao!\nCosa vuoi leggere oggi?\n(I testi con * non sono ufficiali delle prove MT, sono raccondi di G. Rodari)',
                         ),
                         GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
-                            childAspectRatio:
+                                childAspectRatio:
                                 ReadingCard.kWidth / ReadingCard.kHeight,
                             crossAxisCount: 3,
                             mainAxisSpacing: 10,
                             crossAxisSpacing: 10,
                           ),
-                          itemBuilder: (context, index) => ReadingCard(),
+                          itemBuilder: (context, index) => ReadingCard(chosenId: index,),
                           padding: const EdgeInsets.all(20),
-                          itemCount: 9,
+                          itemCount: 12,
                           shrinkWrap: true,
                         ),
                       ],
