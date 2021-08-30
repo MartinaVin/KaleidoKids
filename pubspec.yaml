@@ -10,6 +10,7 @@ environment:
 
 dependencies:
   faker: ^2.0.0
+  flauto: ^3.0.1+1
   flutter:
     sdk: flutter
   http: ^0.13.3

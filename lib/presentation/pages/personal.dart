@@ -55,6 +55,7 @@ class _PersonalPage extends State<PersonalPage> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
                       children: [
@@ -174,14 +175,41 @@ class _PersonalPage extends State<PersonalPage> {
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               // ignore: prefer_const_constructors
-                              ResponsiveText(
-                                "Info lettura",
-                                textAlign: TextAlign.center,
-                              ),
+                              Row(
+                                    children: [
+                                      ResponsiveText(
+                                        "Letture svolte:",
+                                        textAlign: TextAlign.left,
+                                        style:
+                                            Theme.of(context).textTheme.headline6,
+                                      ),
+                                      // ignore: prefer_const_constructors
+                                      ResponsiveText(
+                                        "---",
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                              Row(
+                                    children: [
+                                      ResponsiveText(
+                                        "Livello:",
+                                        textAlign: TextAlign.left,
+                                        style:
+                                            Theme.of(context).textTheme.headline6,
+                                      ),
+                                      // ignore: prefer_const_constructors
+                                      ResponsiveText(
+                                        "---",
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                              
                             ]),
                       ),
                     ),
